@@ -10,6 +10,15 @@
         body { margin: 0; padding: 0; }
         #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 
+        /* Logo styling */
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px; /* Adjust size as needed */
+            z-index: 1; /* Ensure it appears above the map */
+        }
+
         /* Popup styling */
         .mapboxgl-popup {
             max-width: 400px; /* Default max width */
@@ -43,7 +52,8 @@
 
         /* Marker styling */
         .custom-marker {
-            background-image: url('https://www.icegif.com/wp-content/uploads/2022/10/icegif-1214.gif');
+            /*background-image: url('https://www.icegif.com/wp-content/uploads/2022/10/icegif-1214.gif');*/
+            background-image: url('location.gif');
             background-size: cover;
             width: 50px;
             height: 50px;
@@ -59,12 +69,13 @@
 </head>
 <body>
     <div id="map"></div>
+    <img src="https://www.orangutanodysseys.com/front/images/logo.png" class="logo" alt="Orangutan Odysseys Logo">
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2FuamF5ZCIsImEiOiJja3lqdDZoNGUyNjdxMndsa3ZsbzczdGQ5In0.uHzsBFhH6X40NRvksSH9Hg';
 
         const map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/sanjayd/clk9kqdz0001j01qtemt860g1', // light monochrome style
+            style: 'mapbox://styles/mapbox/light-v10', // light monochrome style
             center: [98.67244126382421, 3.5946443052351067], // starting position [lng, lat]
             zoom: 5 // starting zoom
         });
