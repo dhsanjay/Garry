@@ -55,15 +55,15 @@
             /*background-image: url('https://www.icegif.com/wp-content/uploads/2022/10/icegif-1214.gif');*/
             background-image: url('location.gif');
             background-size: cover;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             cursor: pointer;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
         }
         .custom-marker:hover {
             transform: scale(1.2) translateY(-5px); /* Scale up and move up */
-            box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8); /* Highlight with shadow */
+            box-shadow: 0px 0px 10px rgba(255, 165, 0, 1); /* Highlight with shadow */
         }
     </style>
 </head>
@@ -75,7 +75,7 @@
 
         const map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/sanjayd/clm04jtuv00o001pj9acbajkt', // light monochrome style
+            style: 'mapbox://styles/sanjayd/clklatm89001s01o8cfg0epdv', // light monochrome style
             center: [98.67244126382421, 3.5946443052351067], // starting position [lng, lat]
             zoom: 5 // starting zoom
         });
